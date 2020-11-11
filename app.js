@@ -32,9 +32,12 @@ app.get('/', (req, res) => {
     .catch(error => console.log(error))
 })
 
-app.get('/restaurants/:index', (req, res) => {
-  const restaurantSelected = restaurant.results.find(res => res.id.toString() === req.params.index)
-  res.render('show', { restaurant: restaurantSelected })
+app.get('/restaurants/:id', (req, res) => {
+  const id = req.params.id
+  return Restaurant.findById(id)
+    .lean()
+    .then(restaurant => res.render('show', { restaurant }))
+    .catch(error => console.log(error))
 })
 
 app.get('/search', (req, res) => {
