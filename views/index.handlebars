@@ -34,11 +34,15 @@
                 {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
-
+            </div>
+            <div class="card-footer p-3">
+              <a href="/restaurants/{{this._id}}/edit">edit</a>
+              <form action="/restaurants/{{this._id}}/delete" method="POST" style="display: inline;">
+                <button type="submit">delete</button>
+              </form>
             </div>
           </div>
         </a>
-        <a href="/restaurants/{{this._id}}/edit">edit</a>
         {{/each}}
       </div>
     </div>
