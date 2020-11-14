@@ -6,7 +6,7 @@
         <div class="card-body">
           <h5 class="card-title text-center">Edit Restaurant</h5>
           <hr>
-          <form method="POST" action="/restaurants">
+          <form method="POST" action="/restaurants/{{restaurant._id}}/edit">
             <div class="form-group form-row">
               <label for="name" class="col-md-4 col-form-label">
                 Name
@@ -85,7 +85,7 @@
               </div>
             </div>
 
-            <button class="btn btn-success" type="submit">New Restaurant</button>
+            <button class="btn btn-success" type="submit">Edit Restaurant</button>
             <a href="/restaurants/{{restaurant._id}}">back</a>
           </form>
         </div>

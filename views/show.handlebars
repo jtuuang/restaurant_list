@@ -2,18 +2,18 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-10 mx-auto">
-      <p class="mb-1">
-        <a href="/restaurants/{{restaurant._id}}/edit">edit</a>
+
+      <a href="/restaurants/{{restaurant._id}}/edit">edit</a>
       <form action="/restaurants/{{restaurant._id}}/delete" method="POST" style="display: inline;">
         <button type="submit">delete</button>
       </form>
       </p>
-      <p class="mb-1">
-        <span class="text-secondary">
-          <i class="fas fa-utensils pr-2"></i>
-          類別：
-        </span>
-        {{restaurant.category}}
+
+      <span class="text-secondary">
+        <i class="fas fa-utensils pr-2"></i>
+        類別：
+      </span>
+      {{restaurant.category}}
       </p>
 
       <p class="mb-1">
