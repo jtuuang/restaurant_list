@@ -1,13 +1,89 @@
-<h2>八個欄位都要填！</h2>
+<div class="container py-5">
 
-<form action="/restaurants" method="POST">
-  <input type="text" placeholder="name" name="name">
-  <input type="text" placeholder="category" name="category">
-  <input type="text" placeholder="image(URL)" name="image">
-  <input type="text" placeholder="location" name="location">
-  <input type="text" placeholder="phone" name="phone">
-  <input type="text" placeholder="google_map(URL)" name="google_map">
-  <input type="text" placeholder="rating(1-5)" name="rating">
-  <input type="text" placeholder="description" name="description">
-  <button type="submit">Create</button>
-</form>
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">New Restaurant</h5>
+          <hr>
+          <form method="POST" action="/restaurants">
+            <div class="form-group form-row">
+              <label for="name" class="col-md-4 col-form-label">
+                Name
+              </label>
+              <div class="col-md-8">
+                <input type="string" name="name" class="form-control" id="name" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="category" class="col-md-4 col-form-label">
+                Category
+              </label>
+              <div class="col-md-8">
+                <input type="string" name="category" class="form-control" id="category" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="image" class="col-md-4 col-form-label">
+                Image
+              </label>
+              <div class="col-md-8">
+                <input type="string" name="image" class="form-control" id="image" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="location" class="col-md-4 col-form-label">
+                Location
+              </label>
+              <div class="col-md-8">
+                <input type="string" name="location" class="form-control" id="location" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="phone" class="col-md-4 col-form-label">
+                Phone
+              </label>
+              <div class="col-md-8">
+                <input type="string" name="phone" class="form-control" id="phone" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="google_map" class="col-md-4 col-form-label">
+                Google_map
+              </label>
+              <div class="col-md-8">
+                <input type="string" name="google_map" class="form-control" id="google_map" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="rating" class="col-md-4 col-form-label">
+                Rating
+              </label>
+              <div class="col-md-8">
+                <input type="number" name="rating" class="form-control" id="rating" min="0" max="5" required>
+                <small>range: 0 - 5</small>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="description" class="col-md-4 col-form-label">
+                Description
+              </label>
+              <div class="col-md-8">
+                <input type="string" name="description" class="form-control" id="description">
+              </div>
+            </div>
+
+            <button class="btn btn-success" type="submit">New Restaurant</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
