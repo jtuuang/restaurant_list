@@ -12,15 +12,11 @@
 ## 安裝
 - 開啟終端機(Terminal)cd 到存放專案本機位置並執行:
 git clone https://github.com/jtuuang/restaurant_list.git
-- 進入檔案資料夾
-- 初始
-npm install
-- 建立資料庫
-在 Robo 3T 建立 restaurant-list 資料庫
-- 載入資料
-npm run seed
-- 開啟程式
-npm run dev
+- 進入檔案資料夾:
+- 初始: npm install
+- 建立資料庫: 在 Robo 3T 建立 restaurant-list 資料庫
+- 載入資料: npm run seed
+- 開啟程式: npm run dev
 
 ## 使用工具
 - Visual Studio
@@ -30,3 +26,4 @@ npm run dev
 - mongoose
 - mongodb
 - Robo 3T
+- method-override
