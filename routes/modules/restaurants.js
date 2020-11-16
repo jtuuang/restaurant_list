@@ -27,8 +27,8 @@ router.get('/search', (req, res) => {
   const keyword = req.query.keyword
   return Restaurant.find()
     .lean()
-    .then(restaurant => restaurant = restaurant.filter(res => res.name.toLowerCase().includes(keyword.toLowerCase())))
-    .then(restaurant => res.render('index', { restaurant }))
+    .then(restaurants => restaurants = restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(keyword.toLowerCase())))
+    .then(restaurants => res.render('index', { restaurants }))
     .catch(error => console.log(error))
 })
 
