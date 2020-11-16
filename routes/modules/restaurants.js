@@ -1,4 +1,5 @@
 const express = require('express')
+const restaurant = require('../../models/restaurant')
 const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 
@@ -19,6 +20,15 @@ router.post('/', (req, res) => {
     description
   })
     .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+})
+
+router.get('/search', (req, res) => {
+  const keyword = req.query.keyword
+  return Restaurant.find()
+    .lean()
+    .then(restaurant => restaurant = restaurant.filter(res => res.name.toLowerCase().includes(keyword.toLowerCase())))
+    .then(restaurant => res.render('index', { restaurant }))
     .catch(error => console.log(error))
 })
 
